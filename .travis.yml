@@ -6,4 +6,4 @@ before_install:
   - docker build -t usermikez/docker-reacts -f Dockerfile.dev .
 
 script:
-  - docker run usermikez/docker-reacts npm run test -- --coverage
+  - docker run -e CI=true usermikez/docker-reacts npm run test -- --coverage
